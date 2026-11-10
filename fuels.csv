@@ -1,0 +1,35 @@
+lcdb_class,lcdb_name,fuel,model,ros_mult,curing_pct,load_t_ha
+0,Not land,none,none,0,0,0
+1,Built-up Area (settlement),none,none,0,0,0
+2,Urban Parkland/Open Space,grass,o1a,0.5,70,2
+5,Transport Infrastructure,none,none,0,0,0
+6,Surface Mine or Dump,none,none,0,0,0
+10,Sand or Gravel,none,none,0,0,0
+12,Landslide,none,none,0,0,0
+14,Permanent Snow and Ice,none,none,0,0,0
+15,Alpine Grass/Herbfield,tussock,o1b,0.5,100,5
+16,Gravel or Rock,none,none,0,0,0
+20,Lake or Pond,none,none,0,0,0
+21,River,none,none,0,0,0
+22,Estuarine Open Water,none,none,0,0,0
+30,Short-rotation Cropland,crop,o1a,1,70,3
+33,"Orchard, Vineyard or Other Perennial Crop",crop,o1a,0.3,70,2
+40,High Producing Exotic Grassland,grass,o1a,1,70,3
+41,Low Producing Grassland,grass,o1a,1,90,3
+43,Tall Tussock Grassland,tussock,o1b,1,100,10
+44,Depleted Grassland,grass,o1a,0.5,90,1.5
+45,Herbaceous Freshwater Vegetation,tussock,o1b,1,70,8
+46,Herbaceous Saline Vegetation,tussock,o1b,1,70,5
+47,Flaxland,scrub,scrub,0.5,100,15
+50,Fernland,scrub,scrub,1,100,20
+51,Gorse and/or Broom,scrub,scrub,1,100,20
+52,Manuka and/or Kanuka,scrub,scrub,1,100,20
+54,Broadleaved Indigenous Hardwoods,hardwood,scrub,0.5,100,20
+55,Sub Alpine Shrubland,hardwood,scrub,0.5,100,15
+56,Mixed Exotic Shrubland,scrub,scrub,1,100,20
+58,Matagouri or Grey Scrub,scrub,scrub,0.75,100,12
+64,Forest - Harvested,scrub,scrub,0.5,100,20
+68,Deciduous Hardwoods,deciduous,d1,1,100,10
+69,Indigenous Forest,indigenous,m2,1,100,15
+70,Mangrove,none,none,0,0,0
+71,Exotic Forest,pine,c6,1,100,20

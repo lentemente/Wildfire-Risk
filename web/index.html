@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wildfire spread risk: Central Otago and Queenstown Lakes</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="map"></div>
+
+<aside id="panel">
+  <header>
+    <h1>Wildfire spread risk</h1>
+    <p class="sub">Central Otago and Queenstown Lakes. Fires simulated from power lines, <span id="hours">6</span>-hour burn.</p>
+  </header>
+
+  <section>
+    <label class="h" for="scenario">Wind scenario</label>
+    <select id="scenario"></select>
+    <p class="note" id="scenario-note"></p>
+  </section>
+
+  <section>
+    <span class="h">Risk layer</span>
+    <div id="overlays" class="radios"></div>
+    <label class="slider">Opacity <input id="opacity" type="range" min="0" max="100" value="80"></label>
+    <div id="legend" class="legend"></div>
+  </section>
+
+  <section>
+    <span class="h">Features</span>
+    <label class="check"><input type="checkbox" id="t-lines" checked> Power lines, coloured by</label>
+    <select id="line-metric">
+      <option value="priority">patrol priority (combined score)</option>
+      <option value="bld">buildings a fire from here reaches</option>
+      <option value="pcl_ha">conservation land burned (ha)</option>
+      <option value="ha">total area burned (ha)</option>
+    </select>
+    <div id="line-legend" class="legend"></div>
+    <label class="check"><input type="checkbox" id="t-pcl" checked> Conservation land</label>
+    <label class="check"><input type="checkbox" id="t-bld" checked> Buildings (zoom in)</label>
+    <div id="bld-legend" class="legend"></div>
+    <label class="check"><input type="checkbox" id="t-stn" checked> Fire stations</label>
+    <label class="check"><input type="checkbox" id="t-dist" checked> District boundaries</label>
+  </section>
+
+  <section>
+    <span class="h">View</span>
+    <div class="radios" id="basemaps">
+      <label><input type="radio" name="base" value="hillshade" checked> Hillshade</label>
+      <label id="aerial-opt"><input type="radio" name="base" value="aerial"> Aerial imagery</label>
+    </div>
+    <label class="slider">Terrain height <input id="exag" type="range" min="0" max="3" step="0.1" value="1.5"></label>
+    <p class="note">Right-drag or Ctrl-drag to tilt and rotate.</p>
+  </section>
+
+  <section id="summary"></section>
+
+  <footer>
+    <p class="note">Screening model, not a forecast. No firefighting is modelled. See README for method, sources and limits.</p>
+    <p class="note">Data: LINZ, Manaaki Whenua Landcare Research (LCDB), Department of Conservation, OpenStreetMap contributors, Open-Meteo / ERA5 (Copernicus). CC BY 4.0 / ODbL.</p>
+  </footer>
+</aside>
+<button id="toggle-panel" aria-label="Show or hide panel">☰</button>
+
+<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

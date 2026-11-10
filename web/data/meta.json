@@ -1,0 +1,337 @@
+{
+ "bounds": [
+  167.96766044403603,
+  -45.89063537918226,
+  170.5582170763016,
+  -43.85246093773358
+ ],
+ "minzoom": 7,
+ "maxzoom": 12,
+ "burn_hours": 6,
+ "scenarios": [
+  {
+   "id": "nw",
+   "name": "North-westerly",
+   "from_deg": 315.0,
+   "speed_kmh": 41.0,
+   "temp_c": 22.9,
+   "rh_pct": 33.0,
+   "ffmc": 91.0,
+   "share": 0.55,
+   "isi_open": 38.9
+  },
+  {
+   "id": "w",
+   "name": "Westerly",
+   "from_deg": 270.0,
+   "speed_kmh": 36.8,
+   "temp_c": 23.1,
+   "rh_pct": 33.0,
+   "ffmc": 91.0,
+   "share": 0.268,
+   "isi_open": 31.6
+  },
+  {
+   "id": "n",
+   "name": "Northerly",
+   "from_deg": 0.0,
+   "speed_kmh": 34.4,
+   "temp_c": 23.4,
+   "rh_pct": 33.0,
+   "ffmc": 91.1,
+   "share": 0.163,
+   "isi_open": 28.4
+  }
+ ],
+ "legends": {
+  "canopy": {
+   "title": "Vegetation height from LiDAR",
+   "unit": "m",
+   "breaks": [
+    0.3,
+    1,
+    2,
+    5,
+    10
+   ],
+   "colours": [
+    null,
+    "#cfe8c9",
+    "#93cd8a",
+    "#4fa84a",
+    "#1f7a1f",
+    "#0b4d0b"
+   ],
+   "labels": [
+    "under 0.3 (not shaded)",
+    "0.3 to 1",
+    "1 to 2",
+    "2 to 5",
+    "5 to 10",
+    "over 10"
+   ],
+   "note": "Blank also where no LiDAR has been flown."
+  },
+  "curing": {
+   "title": "Pasture curing from satellite",
+   "unit": "% dead grass",
+   "breaks": [
+    50.5,
+    60,
+    70,
+    80,
+    90
+   ],
+   "colours": [
+    null,
+    "#f3e3c3",
+    "#e3c184",
+    "#cf9a45",
+    "#a86f1c",
+    "#6e4409"
+   ],
+   "labels": [
+    "50 or less: too green to burn (not shaded)",
+    "51 to 60",
+    "60 to 70",
+    "70 to 80",
+    "80 to 90",
+    "90 to 100"
+   ],
+   "note": "Pasture and crops only."
+  },
+  "ros": {
+   "title": "Head-fire rate of spread",
+   "unit": "m/min",
+   "breaks": [
+    2,
+    10,
+    25,
+    50
+   ],
+   "colours": [
+    "#fcd9cf",
+    "#f5a48c",
+    "#e86a4f",
+    "#c93a2c",
+    "#8a1616"
+   ],
+   "labels": [
+    "under 2",
+    "2 to 10",
+    "10 to 25",
+    "25 to 50",
+    "over 50"
+   ]
+  },
+  "intensity": {
+   "title": "Head-fire intensity",
+   "unit": "kW/m",
+   "breaks": [
+    500,
+    2000,
+    4000,
+    10000
+   ],
+   "colours": [
+    "#fcd9cf",
+    "#f5a48c",
+    "#e86a4f",
+    "#c93a2c",
+    "#8a1616"
+   ],
+   "labels": [
+    "under 500",
+    "500 to 2,000",
+    "2,000 to 4,000",
+    "4,000 to 10,000",
+    "over 10,000"
+   ]
+  },
+  "arrival": {
+   "title": "Time for fire to arrive from the nearest line",
+   "unit": "hours",
+   "breaks": [
+    60,
+    120,
+    240
+   ],
+   "colours": [
+    "#8a1616",
+    "#c93a2c",
+    "#e86a4f",
+    "#f5a48c"
+   ],
+   "labels": [
+    "under 1",
+    "1 to 2",
+    "2 to 4",
+    "4 to 6"
+   ]
+  },
+  "wexp": {
+   "title": "Wind exposure",
+   "unit": "x open wind",
+   "breaks": [
+    70,
+    90,
+    105,
+    120
+   ],
+   "colours": [
+    "#256abf",
+    "#86b6ef",
+    null,
+    "#f0a070",
+    "#c9481e"
+   ],
+   "labels": [
+    "under 0.7 (sheltered)",
+    "0.7 to 0.9",
+    "0.9 to 1.05",
+    "1.05 to 1.2",
+    "over 1.2 (exposed)"
+   ]
+  },
+  "burn": {
+   "title": "Simulated line fires reaching this spot",
+   "unit": "fires",
+   "breaks": [
+    15,
+    29,
+    50,
+    96
+   ],
+   "colours": [
+    "#dcd6f7",
+    "#b3a8ee",
+    "#8a78e0",
+    "#6250d6",
+    "#3a2a8f"
+   ],
+   "labels": [
+    "1 to 14",
+    "15 to 28",
+    "29 to 49",
+    "50 to 95",
+    "96 or more"
+   ],
+   "note": "One fire is simulated for about every 0.5 km of line."
+  }
+ },
+ "fuel_legend": [
+  {
+   "label": "Pasture and short grass",
+   "colour": "#eda100"
+  },
+  {
+   "label": "Tussock and rank grass",
+   "colour": "#eb6834"
+  },
+  {
+   "label": "Scrub (manuka, gorse, matagouri)",
+   "colour": "#e34948"
+  },
+  {
+   "label": "Hardwood and sub-alpine shrubs",
+   "colour": "#e87ba4"
+  },
+  {
+   "label": "Exotic conifer forest",
+   "colour": "#008300"
+  },
+  {
+   "label": "Indigenous forest",
+   "colour": "#1baf7a"
+  },
+  {
+   "label": "Deciduous trees",
+   "colour": "#6250d6"
+  },
+  {
+   "label": "Crops, orchards, vineyards",
+   "colour": "#2a78d6"
+  },
+  {
+   "label": "Irrigated pasture",
+   "colour": "#9ec5f4"
+  }
+ ],
+ "line_breaks": {
+  "ha": [
+   840.0,
+   1800.0,
+   2800.0,
+   4600.0
+  ],
+  "pcl_ha": [
+   27.0,
+   110.0,
+   520.0,
+   1300.0
+  ],
+  "bld": [
+   72.0,
+   220.0,
+   540.0,
+   830.0
+  ]
+ },
+ "summary": {
+  "ignitions": 8110,
+  "line_km": 1827,
+  "lines": 7625,
+  "by_scenario": {
+   "nw": {
+    "median_ha": 326.5,
+    "p90_ha": 2136.0,
+    "share_reaching_building": 0.828,
+    "share_reaching_pcl": 0.604
+   },
+   "w": {
+    "median_ha": 300.5,
+    "p90_ha": 1837.1000000000004,
+    "share_reaching_building": 0.826,
+    "share_reaching_pcl": 0.59
+   },
+   "n": {
+    "median_ha": 313.0,
+    "p90_ha": 1931.4000000000015,
+    "share_reaching_building": 0.839,
+    "share_reaching_pcl": 0.608
+   }
+  },
+  "pcl_ha": 1458834.0,
+  "pcl_ha_reached_worst": 58006.33,
+  "buildings": 96723,
+  "buildings_reached_worst": 27475,
+  "business_buildings_reached_worst": 708
+ },
+ "priority": {
+  "bands": [
+   "Very high",
+   "High",
+   "Medium",
+   "Low"
+  ],
+  "weights": {
+   "property": 0.4,
+   "conservation": 0.25,
+   "response": 0.25,
+   "spread": 0.1
+  },
+  "commercial_multiplier": 3,
+  "km": {
+   "Very high": 183,
+   "High": 365,
+   "Medium": 548,
+   "Low": 731
+  },
+  "min_score": {
+   "Very high": 64.4,
+   "High": 53.2,
+   "Medium": 39.5,
+   "Low": 0.0
+  }
+ }
+}

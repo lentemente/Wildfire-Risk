@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Open the map",
+            "type": "node-terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "command": "powershell -ExecutionPolicy Bypass -File run.ps1 -Serve"
+        },
+        {
+            "name": "Rebuild everything, then open the map",
+            "type": "node-terminal",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "command": "powershell -ExecutionPolicy Bypass -File run.ps1"
+        }
+    ]
+}
